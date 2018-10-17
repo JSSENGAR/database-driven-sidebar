@@ -1,0 +1,37 @@
+CREATE TABLE `dynamic_menu` (
+  `id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
+  `parent_id` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `title` varchar(100) NOT NULL DEFAULT '',
+  `url` varchar(100) NOT NULL DEFAULT '',
+  `menu_order` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `status` tinyint(1) DEFAULT '1',
+  `level` tinyint(1) DEFAULT NULL,
+  `icon` varchar(100) DEFAULT NULL,
+  `description` varchar(150) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+)
+
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (1,0,'Home','',1,1,0,'fa fa-dashboard',NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (3,0,'Setup','#',5,1,2,'fa fa-sitemap',NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (5,0,'Administrator','#',6,1,1,'fa fa-shield',NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (6,5,'User','/form/fdatauser.php',1,1,0,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (2,3,'Setup Kategori','/form/fkategori.php',2,1,0,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (4,0,'Invent','/form/fdataasset.php',2,1,0,'fa fa-plus-square',NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (35,5,'Office Setup','/form/fperusahaan.php',3,1,2,'',NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (33,0,'Report','/form/flaporan.php',4,1,0,'fa fa-bar-chart-o',NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (36,31,'Transaction History','/form/fdatatransaksi.php',7,1,0,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (34,3,'Brand Setup','/form/fmerk.php',4,0,0,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (41,31,'Refund Transaction','/form/fpengembalian.php',5,1,0,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (38,3,'Category Setup','/form/fgolongan.php',1,1,0,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (39,31,'Sales Transaction','/form/fpenjualan.php',3,1,0,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (40,31,'Purchase Transaction','/form/fpeminjaman.php',4,1,0,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (42,3,'Type Setup','/form/fjenis.php',3,0,0,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (43,31,'Others Transaction','/form/flainlain.php',6,1,0,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (44,0,'Process','/form/fproses.php',3,1,1,'fa fa-spinner',NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (45,4,'Invent Setup','/form/fdataasset.php',1,1,1,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (46,4,'Bopi Setup','/form/fbopi.php',2,1,0,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (47,5,'Log user','/form/floguser.php',2,1,1,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (48,5,'Admin tool','/form/adminform.php',4,1,2,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (49,33,'Lastmonth Report','/form/flaporanlama.php',1,1,0,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (50,4,'Taka Setup','/form/ftaka.php',3,1,1,NULL,NULL);
+insert  into `dynamic_menu`(`id`,`parent_id`,`title`,`url`,`menu_order`,`status`,`level`,`icon`,`description`) values (51,4,'Invent Data','/application/data-invent/',1,1,0,NULL,NULL);
